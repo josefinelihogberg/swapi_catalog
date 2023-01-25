@@ -1,11 +1,11 @@
 function Films() {
-    return(
-        // <div>
-        //         <img ></img>
-        //         <button className='films-btn' onClick={filmsHandler}>Films</button>
-        // </div>
-        <div>hej</div>
-    )
+return (
+    <p className="text">hello</p>
+)
 }
 
 export default Films;
+
+
+//fetch
+//information rendering
