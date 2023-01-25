@@ -1,0 +1,22 @@
+.main-container {
+    width: 1920px;
+    height: 100vh; 
+    background-color: black;
+}
+
+.btn-section {
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    margin: 0 auto; 
+    position: absolute;
+    top: +50%; 
+    left: 45%;
+}
+
+button {
+    margin: 5em 1em; 
+    width: 100px; 
+    padding: 1em; 
+
+}

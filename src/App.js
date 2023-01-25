@@ -1,10 +1,16 @@
-import UI from './components/UI'
+import Frontpage from './components/UI/Frontpage'
 import './App.css';
+import React from 'react';
 
 function App() {
   return (
-    <UI />
+    <div>
+    <Frontpage />
+    </div>
   );
 }
 
 export default App;
+
+
+

@@ -9,8 +9,3 @@ root.render(
     <App />
 );
 
-
-
-//comment2//
-
-// just seeing how things work//

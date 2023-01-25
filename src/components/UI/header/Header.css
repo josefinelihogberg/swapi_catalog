@@ -1,0 +1,8 @@
+.main-header {
+    position: absolute; 
+    top: 3%;
+    left: 7%;
+    color: rgb(255, 213, 0);
+    font-size: 4em;
+    text-transform: uppercase;
+}
