@@ -4,7 +4,8 @@ function Header() {
     return (
       <div>
         <header className="main-header">
-            <h1 className="header-title">StarWars Catal og</h1>
+            <h1 className="header-title">StarWars</h1>
+            <h2 className="header-title-under">Catalog</h2>
         </header>
       </div>
     );

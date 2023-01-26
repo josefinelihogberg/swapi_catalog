@@ -1,6 +1,65 @@
-.text {
-    width: 600px;
-    height: 300px;
-    background-color: white;
-    z-index: 1000;
+.icon-img {
+    height: 70px;
+    width: 70px;  
+    padding: 1em; 
+    border-radius: 40%;
+    background-color: rgb(254, 235, 235);
 }
+
+.img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em; 
+}
+
+.result {
+    width: 60%; 
+    height: 600px; 
+    overflow: auto;
+    position: absolute;
+    top: 15%;
+    left: 24%; 
+    }
+
+
+.info {
+    display: flex; 
+    justify-content: space-between;
+    flex: 0 1 50%; 
+    background-color: white;
+}
+.result div {
+    padding: 1em; 
+    flex: 0 1 50%; 
+}
+
+.info p {
+    padding: 0.3em;
+}
+
+button {
+    font-family: jedi;
+    font-size: 1.2em;
+    width: 8em; 
+    border-radius: 15px;
+    border-style: none;
+    margin: 0.5em; 
+    padding: 0.4em; 
+}
+
+input {
+    position: absolute; 
+    top: 6%;
+    left: 43%;
+    padding: 1em; 
+    width: 300px; 
+}
+/* .img-div:hover {
+    border-radius: 40%;
+    background-color: rgb(254, 235, 235);
+    box-shadow:
+    0 0 20px 10px rgba(254, 235, 235),  /* inner white */
+    /* 0 0 20px 10px rgba(248, 227, 254), middle magenta */
+    /* 0 0 80px 40px rgba(11, 27, 109); outer cyan */
+/* } */

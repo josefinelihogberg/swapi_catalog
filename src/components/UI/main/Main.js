@@ -1,49 +1,34 @@
 import './Main.css';
 import backgroundImg from '../assets/planet_background.jpg';
-import leia from '../assets/people_leia.png';
-import planet from '../assets/deathstar_planet.png';
 import atat from '../assets/ATAT.png';
-import falcon from '../assets/millenium_falcon_starship.png';
-import yoda from '../assets/species_yoda.png';
-import Searchbar from '../../search/Search';
 import Films from '../../categories/films/Films';
+import People from '../../categories/people/People';
+import Planet from '../../categories/planets/Planets';
+import Species from '../../categories/species/Species';
+import Starships from '../../categories/starships/Starships';
 
 function Main() {
-    function handleClick(){
-        console.log('Hello');
-        return (
-            <Films/>
-        )
-        } 
-        
-    
     return (
         <div className='main-container'>
-            <img classnName='bg-img' src={backgroundImg} alt="Planet in space" />
+            <img className='bg-img' src={backgroundImg} alt="Planet in space" />
             <div className='flex'>
             <aside className='btn-section'>
             <div className='img-div'>
-                <img className="icon-img" src={leia} alt='Princess Leia from Starwars' />
-                <button className='films-btn' onClick={handleClick}>Films</button>
+            <Films/>
             </div>
             <div className='img-div'>
-            <img className="icon-img" src={leia} alt='Princess Leia from Starwars' />
-                <button className='people-btn'>People</button>
+            <People />
             </div>
             <div className='img-div'>
-            <img className="icon-img" src={planet} alt='Deathstar pretending to be a planet' />
-                <button className='planets-btn'>Planets</button>
+            <Planet/>
             </div>
             </aside>
-            <section><Searchbar /></section>
             <aside className='btn-section'>
             <div className='img-div'>
-            <img className="icon-img" src={yoda} alt='Starwars alien species Yoda' />
-                <button className='species-btn'>Species</button>
+            <Species />
             </div>
             <div className='img-div'>
-            <img className="icon-img" src={falcon} alt='Millenium Falcon' />
-                <button className='starships-btn'>Starships</button>
+            <Starships />
             </div>
             <div className='img-div'>
             <img className="icon-img" src={atat} alt='ATAT Starwars vehicle' />
