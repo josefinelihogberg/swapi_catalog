@@ -12,24 +12,30 @@ function Starships() {
             console.log(data);
             setStarship(data.results);
         };
+
+        function HandleClick() {
+            getData()
+            setIsVisible(true)
+        }
     return (
         <div>
             <div className='img-div'>
             <input placeholder='Search..' onChange = {event => setQuery(event.target.value) }/>
             <img className="icon-img" src={falcon} alt='Princess Leia from Starwars' />
             
-            <button onClick={getData}>Starships</button>
+            <button onClick={HandleClick}>Starships</button>
             </div>
             
             
             <div className="result" onClick={() => setIsVisible(false)} style = {{ display: isVisible ? "block" : "none"}}>
             {starship.filter(starship => {
-                if (starship.name.toLowerCase().includes(query.toLowerCase())) {
-                    console.log(starship);
+                if (query === "") {
                     return starship;
-                    
+                } else if (starship.name.toLowerCase().includes(query.toLowerCase())){
+                    console.log(starship)
+                    return starship;
                 } else {
-                    return starship;
+                    return false;
                 }
             }).map((starship) => (
             <div key = {starship.name} className='info'>

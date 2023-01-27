@@ -1,3 +1,4 @@
+// import React, {useState} from 'react';
 import './Main.css';
 import backgroundImg from '../assets/planet_background.jpg';
 import atat from '../assets/ATAT.png';
@@ -8,13 +9,16 @@ import Species from '../../categories/species/Species';
 import Starships from '../../categories/starships/Starships';
 
 function Main() {
+    // const [active, setActive] = useState("");
     return (
         <div className='main-container'>
             <img className='bg-img' src={backgroundImg} alt="Planet in space" />
             <div className='flex'>
             <aside className='btn-section'>
             <div className='img-div'>
+            <div>
             <Films/>
+            </div>
             </div>
             <div className='img-div'>
             <People />
@@ -32,7 +36,7 @@ function Main() {
             </div>
             <div className='img-div'>
             <img className="icon-img" src={atat} alt='ATAT Starwars vehicle' />
-                <button className='vehicles-btn'>Vehicles</button>
+            <button className='vehicles-btn'>Vehicles</button>
             </div>
             </aside>
             </div>

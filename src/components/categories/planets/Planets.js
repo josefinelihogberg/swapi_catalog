@@ -32,7 +32,7 @@ function Planets() {
            
             </div>
         ))}
-      </div>,
+      </div>
         </div>
     )
 }

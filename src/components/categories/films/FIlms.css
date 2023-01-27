@@ -16,10 +16,11 @@
 .result {
     width: 60%; 
     height: 600px; 
-    overflow: auto;
+    overflow-y: scroll;
     position: absolute;
     top: 15%;
     left: 24%; 
+    z-index: 1000;
     }
 
 
@@ -29,6 +30,7 @@
     flex: 0 1 50%; 
     background-color: white;
 }
+
 .result div {
     padding: 1em; 
     flex: 0 1 50%; 
