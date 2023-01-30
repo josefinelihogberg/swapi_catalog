@@ -58,17 +58,17 @@ const urls = [
                     return false;
                 };
             }).map((person) => (
-            <div key = {person.name} className='info'>
-            <p>{person.name}</p>
-            <div>
-            <p>Gender: {person.gender}</p>
-            <p>Birth Year: {person.birth_year}</p>
-            <p>Height: {person.height} cm</p>
-            <p>Weight: {person.mass} kg</p>
-            <p>Skin color: {person.skin_color}</p>
-            <p>Hair color: {person.hair_color}</p>
-            <p>Eye color: {person.eye_color}</p>
-            {<Data urlHome= {person.homeworld} urlSpecies={person.species} />}
+            <div key = {person.name}>
+            <p className='info-title people'>{person.name}</p>
+            <div className='info'>
+            <p><span className='category'>Gender:</span> {person.gender}</p>
+            <p><span className='category'>Birth Year:</span> {person.birth_year}</p>
+            <p><span className='category'>Height:</span> {person.height} cm</p>
+            <p><span className='category'>Weight:</span> {person.mass} kg</p>
+            <p><span className='category'>Skin color:</span> {person.skin_color}</p>
+            <p><span className='category'>Hair color:</span> {person.hair_color}</p>
+            <p><span className='category'>Eye color:</span> {person.eye_color}</p>
+            <p className='data-info'>{<Data urlHome= {person.homeworld} urlSpecies={person.species} />}</p>
             </div>
             </div>
         ))}

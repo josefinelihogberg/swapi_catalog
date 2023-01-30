@@ -52,16 +52,16 @@ const urls = [
                     return false;
                 };
             }).map((vehicle) => (
-            <div key = {vehicle.name} className='info'>
-            <p>{vehicle.name}</p>
-            <div>
-            <p>Vehicle Class: {vehicle.vehicle_class}</p>
-            <p>Cargo Capacity: {vehicle.cargo_capacity}</p>
-            <p>Crew: {vehicle.crew} crewmember/s</p>
-            <p>Passengers: {vehicle.passengers} passenger/s</p>
-            <p>Model: {vehicle.model}</p>
-            <p>Cost: {vehicle.cost_in_credits} credits</p>
-            <p>Manufacturer: {vehicle.manufacturer}</p>
+            <div key = {vehicle.name}>
+            <p className='info-title people'>{vehicle.name}</p>
+            <div  className='info'>
+            <p><span className='category'>Vehicle Class:</span> {vehicle.vehicle_class}</p>
+            <p><span className='category'>Cargo Capacity:</span> {vehicle.cargo_capacity}</p>
+            <p><span className='category'>Crew:</span> {vehicle.crew} crewmember(s)</p>
+            <p><span className='category'>Passengers:</span> {vehicle.passengers} passenger(s)</p>
+            <p><span className='category'>Model: </span>{vehicle.model}</p>
+            <p><span className='category'>Cost:</span>{vehicle.cost_in_credits} credits</p>
+            <p><span className='category'>Manufacturer:</span> {vehicle.manufacturer}</p>
             </div>
            
             </div>

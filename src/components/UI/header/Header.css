@@ -14,13 +14,14 @@
     position: absolute; 
     top: 0%;
     left: 25%; 
-    color: rgb(255, 213, 0);
+    color: rgb(255,231,73);
     font-size: 4em;
     text-transform: uppercase;
 }
 
 .header-title {
     font-family: jedi;
+        text-shadow: 6px 6px 10px rgb(109, 109, 109);
 }
 
 .header-title-under {

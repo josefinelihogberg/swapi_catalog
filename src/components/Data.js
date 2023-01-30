@@ -24,10 +24,10 @@ export default function Data(props) {
     }
 
   return (
-    <div>
-        <p>Homeworld: {home}</p>
-        <p>Species: {(species === "") ? "Human" : species}</p>
-        </div>
+    <div className='data-div'>
+        <p><span className='category'>Homeworld:</span> {home}</p>
+        <p><span className='category'>Species:</span> {(species === "") ? "Human" : species}</p>
+    </div>
   )
 }
 

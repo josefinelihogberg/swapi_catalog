@@ -59,14 +59,14 @@ function Planets() {
                     return false;
                 };
             }).map((planet) => (
-            <div key = {planet.name} className='info'>
-            <div>{planet.name}</div>
+            <div key = {planet.name}>
+            <div className='info-title'>{planet.name}</div>
             
-            <div>
-            <p >Diameter: {planet.diameter}</p>
-            <p >Days in a Year: {planet.orbital_period}</p>
-            <p >Climate: {planet.climate}</p>
-            <p >Terrain: {planet.terrain}</p>
+            <div className='info'>
+            <p><span className='category'>Diameter:</span> {planet.diameter}</p>
+            <p><span className='category'>Orbital period:</span>  {planet.orbital_period} days</p>
+            <p><span className='category'>Climate:</span>  {planet.climate}</p>
+            <p><span className='category'>Terrain: </span> {planet.terrain}</p>
             </div>
            
             </div>

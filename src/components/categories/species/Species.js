@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Data from '../../Data'
+// import Data from '../../Data'
 
 
 export default function Species() {
@@ -57,16 +57,16 @@ export default function Species() {
                     return false;
                 };
             }).map((species) => (
-            <div key = {species.name} className='info'>
-            <div>{species.name}</div>
-            
-            <div>
-            <p >Classification: {species.classification}</p>
-            <p >Height: {species.average_height}</p>
-            <p >Lifespan: {species.average_lifespan}</p>
-            <div>
-                {<Data urlHome= {species.homeworld} />}
-            </div>
+            <div key = {species.name}>
+            <div className='info-title'>{species.name}</div>
+            <div className='info'>
+            <p><span className='category'>Classification:</span> {species.classification}</p>
+            <p><span className='category'>Language: </span>{species.language}</p>
+            <p><span className='category'>Average lifespan: </span>{species.average_lifespan} years</p>
+            <p><span className='category'>Average height:</span> {species.average_height} cm</p>
+            <p><span className='category'>Skin colors:</span> {species.skin_colors}</p>
+            <p><span className='category'>Eye colors:</span> {species.eye_colors}</p>
+            <p><span className='category'>Hair colors:</span> {species.hair_colors}</p>
             </div>
            
             </div>

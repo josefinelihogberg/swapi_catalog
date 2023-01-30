@@ -48,13 +48,13 @@ return (
                     return false; 
                 }
             }).map((film) => (
-                <div key = {film.title} className="info">
-                    <div>{film.title} </div>
-                <div>
-                <p>Episode: {film.episode_id}</p>
-                <p>Released: {film.release_date}</p>
-                <p>Director: {film.director}</p>
-                <p>Opening Crawl: {film.opening_crawl}</p>
+                <div key = {film.title}>
+                <div className='info-title'>{film.title}</div>
+                <div className="info">
+                <p><span className='category'>Episode:</span> {film.episode_id}</p>
+                <p><span className='category'>Released:</span> {film.release_date}</p>
+                <p><span className='category'>Director:</span> {film.director}</p>
+                <p><span className='category'>Opening Crawl:</span> {film.opening_crawl}</p>
                 <br />
                 </div>
                 </div>

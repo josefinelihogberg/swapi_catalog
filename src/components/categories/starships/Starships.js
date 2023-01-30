@@ -53,14 +53,14 @@ function Starships() {
                     return false;
                 }
             }).map((starship) => (
-            <div key = {starship.name} className='info'>
-            <div>{starship.name}</div>
-            <div>
-            <p >Model: {starship.model}</p>
-            <p >Cargo Capacity: {starship.cargo_capacity}</p>
-            <p >Crew: {starship.crew}</p>
-            <p >Passengers: {starship.passengers}</p>
-            <p >Manufacturer: {starship.manufacturer}</p>
+            <div key = {starship.name}>
+            <div className='info-title'>{starship.name}</div>
+            <div className='info'>
+            <p><span className='category'>Model:</span> {starship.model}</p>
+            <p><span className='category'>Cargo Capacity:</span>  {starship.cargo_capacity}</p>
+            <p><span className='category'>Crew:</span>  {starship.crew} crewmember(s)</p>
+            <p><span className='category'>Passengers:</span>  {starship.passengers} passanger(s)</p>
+            <p><span className='category'>Manufacturer:</span>  {starship.manufacturer}</p>
             </div>
             </div>
         ))}
