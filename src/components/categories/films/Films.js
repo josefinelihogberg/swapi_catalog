@@ -1,12 +1,17 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import "./Films.css";
-import camera from '../../UI/assets/movie-roll.png';
 
 
 export default function Films( ) {
+useEffect(() => {
+    getData();
+
+}, []);
+
 const [films, setFilms] = useState([]);
 const [isLoading, setIsLoading] = useState(false);
 const [err, setErr] = useState("");
+const [query, setQuery] = useState("");
 
 // Async to get film data
     const getData = async()=>{
@@ -25,21 +30,24 @@ const [err, setErr] = useState("");
         setIsLoading(false);
     }
 };
-
-const hideFilm = ()=> {
-
-
-}
-    return (
+return (
         <div>
-            <div className='img-div'>
+            <input className='search-input' placeholder='Search for movie...' 
+            onChange = {event => setQuery(event.target.value)}></input>
+            <div>
         {err && <h2>{err}</h2>}
-        <img className="icon-img camera" src={camera} alt='camera-roll' />
-        <button onClick={getData}>Films</button>
         </div>
         {isLoading && <h2>Loading...</h2>}
-        <div className='result' onClick={hideFilm}>
-            {films.map((film) => (
+        <div className='result'>
+            {films.filter( film => {
+                if (query === "") {
+                    return film; 
+                } else if (film.title.toLowerCase().includes(query.toLowerCase())) {
+                    return film; 
+                } else {
+                    return false; 
+                }
+            }).map((film) => (
                 <div key = {film.title} className="info">
                     <div>{film.title} </div>
                 <div>
@@ -54,7 +62,7 @@ const hideFilm = ()=> {
         </div>
         </div>
       );
-    }
+}
 
 //fetch
 //information rendering

@@ -1,33 +1,48 @@
-import React, {useState} from 'react';
-import falcon from "../../UI/assets/millenium_falcon_starship.png";
+import React, {useState, useEffect} from 'react';
+
 
 function Starships() {
-    const [starship, setStarship] = useState([]);
-    const [isVisible, setIsVisible] = useState(true);
+    useEffect(() => {
+        getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const [starship, setStarships] = useState([]);
     const [query, setQuery] = useState ("");
 
-        const getData = async() => {
-            const res = await fetch("https://swapi.dev/api/starships/");
-            const data = await res.json();
-            console.log(data);
-            setStarship(data.results);
-        };
+    const urls = [
+        "https://swapi.dev/api/starships/?page=1",
+        "https://swapi.dev/api/starships/?page=2",
+        "https://swapi.dev/api/starships/?page=3",
+        "https://swapi.dev/api/starships/?page=4",
+    ]
 
-        function HandleClick() {
-            getData()
-            setIsVisible(true)
+    const getData = async()=>{
+        try {
+            const res = await Promise.all(
+                urls.map(url => fetch(url).then(res => res.json()))
+            );
+            let data = res;
+            let starshipsArray = [];
+            for (let i = 0; i < data.length; i++) {
+                let array = data[i].results; 
+                for (let j = 0; j < array.length; j++) {
+                    starshipsArray.push(array[j]);
+                }
+            }
+            data = starshipsArray; 
+            setStarships(data);
+        } catch (error) {
+            console.log(`Error`, error)
         }
+    };
+
+       
     return (
         <div>
-            <div className='img-div'>
-            <input placeholder='Search..' onChange = {event => setQuery(event.target.value) }/>
-            <img className="icon-img" src={falcon} alt='Princess Leia from Starwars' />
-            
-            <button onClick={HandleClick}>Starships</button>
-            </div>
-            
-            
-            <div className="result" onClick={() => setIsVisible(false)} style = {{ display: isVisible ? "block" : "none"}}>
+             <input className='search-input' placeholder='Search for starship...' 
+            onChange = {event => setQuery(event.target.value)}></input>
+            <div className="result">
             {starship.filter(starship => {
                 if (query === "") {
                     return starship;
