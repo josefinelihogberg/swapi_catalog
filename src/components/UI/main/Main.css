@@ -1,3 +1,7 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
 .main-container {
     width: 100vw;
     background-color: black;
@@ -12,7 +16,6 @@
 
 .bg-img {
     width: 100vw; 
-    height: 100vh; 
 }
 
 .btn-section {

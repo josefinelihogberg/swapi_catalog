@@ -34,19 +34,18 @@
     border: 1px solid #575756;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 15px;
-    box-shadow: 0 0 10px 5px #6a4c93 
-   
-    
-   
+    box-shadow: 0 0 10px 5px #6a4c93;
+    text-align: center;
 }
 
 .result div {
     padding: 1em; 
     flex: 0 1 50%; 
+    margin-top: -.5em;
 }
 
 .info p {
-    margin-left: 25%; 
+    margin-left: 3%; 
     padding: 0.3em;
     font-size: 1.1em;
 }
@@ -85,6 +84,7 @@ button:hover{
     background-color: transparent;
     border: 1px solid #575756;
     color: #575756;
+    font-weight: 700;
     font-size: .8em;
     line-height: 18px;
     
@@ -119,6 +119,7 @@ button:hover{
     font-size: 1.5em; 
     color: #fdd707;
     text-shadow: 2px 2px 4px rgb(109, 109, 109);
+    text-align: center;
 }
 
 p .category {
@@ -133,6 +134,16 @@ p .category {
 .data-div {
     font-size: 0.95em;
     display: block;
-    margin-left: -15em;
+    margin-left: -2em;
     margin-top: -0.1em; 
+    text-align: center;
+}
+
+.getdata-info {
+    position: absolute; 
+    top: 40%;
+    left: 45%;
+    font-family: catalog;
+    font-size: 1em; 
+    color: #fdd707;
 }
