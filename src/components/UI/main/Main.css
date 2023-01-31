@@ -1,0 +1,41 @@
+.main-container {
+    width: 100vw;
+    background-color: black;
+}
+.flex {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 23%; 
+    justify-content: space-between;
+}
+
+.bg-img {
+    width: 100vw; 
+    /* height: 100vh;  */
+}
+
+.btn-section {
+    margin-top: 4%; 
+}
+
+
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    .icon-img {
+        width: 20px; 
+        height: 20px; 
+        padding: 0.5em; 
+    }
+    .btn-section {
+        margin: -1em; 
+        margin-top: -4%; 
+    }
+    .main-container {
+        height: 98%; 
+    }
+    .bg-img {
+        height: 100vh; 
+        width: 100vw; 
+    }
+}
