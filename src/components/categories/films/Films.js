@@ -34,10 +34,10 @@ return (
         <div>
             <input className='search-input' placeholder='Search for movie...' 
             onChange = {event => setQuery(event.target.value)}></input>
-            <div>
+            <div className='loading-error'>
         {err && <h2>{err}</h2>}
-        </div>
         {isLoading && <h2>Loading...</h2>}
+        </div>
         <div className='result'>
             {films.filter( film => {
                 if (query === "") {

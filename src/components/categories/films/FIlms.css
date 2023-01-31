@@ -97,6 +97,50 @@ p .category {
 .data-div {
     font-size: 0.95em;
     display: block;
-    margin-left: -9.79em;
+    margin-left: -14.6em;
     margin-top: -0.1em; 
+}
+
+.loading-error {
+    color: rgb(255,231,73);
+    text-transform: uppercase;
+    font-family: catalog;
+    position: absolute; 
+    top: 40%;
+    left: 45%; 
+    z-index: 1000; 
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1500px) {
+    button {
+        margin: 0.1em; 
+        font-size: 1em;
+    }
+    .search-input {
+        left: 35%; 
+        top: 22%;
+    }
+    .result {
+        height: 450px; 
+        width: 50%;
+        left: 27%; 
+    }
+    .info p {
+        font-size: .9em;
+    }
+    .data-div {
+        font-size: 1.12em;
+        display: block;
+        margin-left: -8.13em;
+        margin-top: -0.1em; 
+    }
+    .loading-error {
+        color: rgb(255,231,73);
+        text-transform: uppercase;
+        font-family: catalog;
+        position: absolute; 
+        top: 40%;
+        left: 45%; 
+        z-index: 1000; 
+    }
 }

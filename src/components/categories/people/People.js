@@ -10,6 +10,7 @@ export default function People() {
 
 const [people, setPeople] = useState([]);
 const [query, setQuery] = useState ("");
+const [isLoading, setIsLoading] = useState(false);
 
 const urls = [
     "https://swapi.dev/api/people/?page=1",
@@ -24,6 +25,7 @@ const urls = [
 ]
 
     const getData = async()=>{
+        setIsLoading(true)
         try {
             const res = await Promise.all(
                 urls.map(url => fetch(url).then(res => res.json()))
@@ -41,12 +43,18 @@ const urls = [
             setPeople(data);
         } catch (error) {
             console.log(`Error`, error)
+        } finally {
+            setIsLoading(false);
         }
     };
     return (
         <div>
             <input className='search-input' placeholder='Search for character...' 
             onChange = {event => setQuery(event.target.value)}></input>
+            <div className='loading-error'>
+        {/* {err && <h2>{err}</h2>} */}
+        {isLoading && <h2>Loading...</h2>}
+        </div>
             <div className="result">
             {people.filter(person => {
                 if (query === "") {
