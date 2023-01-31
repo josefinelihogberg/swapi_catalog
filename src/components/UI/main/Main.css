@@ -6,7 +6,7 @@
     width: 100%;
     display: flex;
     position: absolute;
-    top: 23%; 
+    top: 17%; 
     justify-content: space-between;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .btn-section {
-    margin-top: 4%; 
+    margin-top: .2em ; 
 }
 
 

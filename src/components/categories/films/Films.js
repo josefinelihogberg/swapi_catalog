@@ -55,7 +55,6 @@ return (
                 <p><span className='category'>Released:</span> {film.release_date}</p>
                 <p><span className='category'>Director:</span> {film.director}</p>
                 <p><span className='category'>Opening Crawl:</span> {film.opening_crawl}</p>
-                <br />
                 </div>
                 </div>
             ))}
