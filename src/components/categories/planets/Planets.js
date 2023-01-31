@@ -10,6 +10,8 @@ function Planets() {
 
     const [planet, setPlanets] = useState([]);
     const [query, setQuery] = useState ("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [err, setErr] = useState("");
 
     const urls = [
         "https://swapi.dev/api/planets/?page=1",
@@ -21,6 +23,7 @@ function Planets() {
     ]
 
     const getData = async()=>{
+        setIsLoading(true)
         try {
             const res = await Promise.all(
                 urls.map(url => fetch(url).then(res => res.json()))
@@ -38,7 +41,10 @@ function Planets() {
             data = planetsArray; 
             setPlanets(data);
         } catch (error) {
-            console.log(`Error`, error)
+            console.log(`Error`, error);
+            setErr(`Something went wrong: ${err.message}`);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -46,10 +52,12 @@ function Planets() {
         <div>
             <input className='search-input' placeholder='Search for a planet...' 
             onChange = {event => setQuery(event.target.value)}></input>
-            <div>
+            <div className='loading-error'>
+            {err && <h2>{err}</h2>}
+            {isLoading && <h2>Loading...</h2>}
             </div>
             <div className="result">
-        {planet.filter(planet => {
+            {planet.filter(planet => {
                 if (query === "") {
                     return planet;
                 } else if (planet.name.toLowerCase().includes(query.toLowerCase())){

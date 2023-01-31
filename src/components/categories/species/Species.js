@@ -10,6 +10,8 @@ export default function Species() {
     
     const [species, setSpecies] = useState([]);
     const [query, setQuery] = useState ("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [err, setErr] = useState("");
 
     
     const urls = [
@@ -20,6 +22,7 @@ export default function Species() {
     ];
 
     const getData = async()=>{
+      setIsLoading(true)
       try {
           const res = await Promise.all(
               urls.map(url => fetch(url).then(res => res.json()))
@@ -37,15 +40,21 @@ export default function Species() {
           setSpecies(data);
       } catch (error) {
           console.log(`Error`, error)
+          setErr(`Something went wrong: ${err.message}`);
       }
+      finally {
+        setIsLoading(false);
+    }
   };
 
   return (
     <div>
       <input className='search-input' placeholder='Search for species...' 
             onChange = {event => setQuery(event.target.value)}></input>
-      <div>
-      </div>
+      <div className='loading-error'>
+            {err && <h2>{err}</h2>}
+            {isLoading && <h2>Loading...</h2>}
+        </div>
       <div className='result'>
         {species.filter(species => {
                 if (query === "") {
