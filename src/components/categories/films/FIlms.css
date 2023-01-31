@@ -1,9 +1,9 @@
 .icon-img {
-    height: 70px;
-    width: 70px;  
+    height: 4em;
+    width: 4em;  
     padding: 1em; 
-    border-radius: 40%;
-    background-color: rgb(254, 235, 235);
+    border-radius: 50%;
+    background-color:#e5e5e5 ;
 }
 
 .img-div {
@@ -16,7 +16,7 @@
 
 .result {
     width: 60%; 
-    height: 600px; 
+    height: 550px; 
     overflow-y: scroll;
     position: absolute;
     top: 30%;
@@ -29,19 +29,23 @@
     display: flex; 
     flex-direction: column;
     flex: 0 1 50%; 
-    background-color: rgba(255, 255,255, 0.5);
-    border: 3px solid rgba(102, 102, 102, 0.5);
+    background-color: transparent;
+    color:#f6f6f6;
+    border: 1px solid #575756;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-radius: 15px;
+    box-shadow: 0 0 10px 5px #6a4c93;
+    text-align: center;
 }
 
 .result div {
     padding: 1em; 
     flex: 0 1 50%; 
+    margin-top: -.5em;
 }
 
 .info p {
-    margin-left: 25%; 
+    margin-left: 3%; 
     padding: 0.3em;
     font-size: 1.1em;
 }
@@ -50,22 +54,54 @@ button {
     font-family: catalog;
     font-size: 1.2em;
     width: 8em; 
-    border-radius: 15px;
+    border-radius: 10px;
     border-style: none;
     margin: 0.5em; 
     padding-top: 0.6em;
     padding-bottom: 0.45em;  
+    background-color: #6a4c93;
+    color: white;
+  transition: transform 500;
+  cursor: pointer;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px,
+   rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px,
+     rgba(240, 46, 170, 0.1) 0px 20px,
+      rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+button:hover{
+    transform: scale(1.2);
 }
 
 .search-input {
     position: absolute; 
-    top: 25%;
+    top: 23%;
     left: 39%;
     padding: 1em; 
-    width: 300px; 
-    border-radius: 6px;
-    background-color: rgb(234, 234, 234);
-    border: 1px solid gray
+    width: 20%; 
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #575756;
+    color: #575756;
+    font-weight: 700;
+    font-size: .8em;
+    line-height: 18px;
+    
+}
+
+.search-input::placeholder{
+    color: #575756;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.search-input:hover,
+.search-input:focus {
+    outline: 0;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #575756;
+    border-radius: 0;
 }
 
 /* .data-info {
@@ -80,9 +116,10 @@ button {
 
 .info-title {
     font-family: catalog;
-    font-size: 1.6em; 
-    color: rgb(255,231,73);
+    font-size: 1.5em; 
+    color: #fdd707;
     text-shadow: 2px 2px 4px rgb(109, 109, 109);
+    text-align: center;
 }
 
 p .category {
@@ -97,18 +134,17 @@ p .category {
 .data-div {
     font-size: 0.95em;
     display: block;
-    margin-left: -14.6em;
+    margin-left: -2em;
     margin-top: -0.1em; 
+    text-align: center;
 }
-
-.loading-error {
-    color: rgb(255,231,73);
-    text-transform: uppercase;
-    font-family: catalog;
+.loading-error{
     position: absolute; 
     top: 40%;
-    left: 45%; 
-    z-index: 1000; 
+    left: 45%;
+    font-family: catalog;
+    font-size: 1em; 
+    color: #fdd707;
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1500px) {

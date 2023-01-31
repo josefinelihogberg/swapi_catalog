@@ -34,7 +34,9 @@ return (
         <div>
             <input className='search-input' placeholder='Search for movie...' 
             onChange = {event => setQuery(event.target.value)}></input>
+
             <div className='loading-error'>
+
         {err && <h2>{err}</h2>}
         {isLoading && <h2>Loading...</h2>}
         </div>
@@ -55,7 +57,6 @@ return (
                 <p><span className='category'>Released:</span> {film.release_date}</p>
                 <p><span className='category'>Director:</span> {film.director}</p>
                 <p><span className='category'>Opening Crawl:</span> {film.opening_crawl}</p>
-                <br />
                 </div>
                 </div>
             ))}
@@ -63,6 +64,3 @@ return (
         </div>
       );
 }
-
-//fetch
-//information rendering

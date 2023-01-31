@@ -1,3 +1,7 @@
+* {
+    margin: 0; 
+    padding: 0; 
+}
 .main-container {
     width: 100vw;
     background-color: black;
@@ -6,17 +10,17 @@
     width: 100%;
     display: flex;
     position: absolute;
-    top: 23%; 
+    top: 17%; 
     justify-content: space-between;
 }
 
 .bg-img {
     width: 100vw; 
-    /* height: 100vh;  */
+    height: 100vh; 
 }
 
 .btn-section {
-    margin-top: 4%; 
+    margin-top: .2em ; 
 }
 
 
