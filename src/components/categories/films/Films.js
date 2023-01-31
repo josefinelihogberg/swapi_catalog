@@ -34,7 +34,9 @@ return (
         <div>
             <input className='search-input' placeholder='Search for movie...' 
             onChange = {event => setQuery(event.target.value)}></input>
-            <div className='getdata-info'>
+
+            <div className='loading-error'>
+
         {err && <h2>{err}</h2>}
         {isLoading && <h2>Loading...</h2>}
         </div>
@@ -62,6 +64,3 @@ return (
         </div>
       );
 }
-
-//fetch
-//information rendering

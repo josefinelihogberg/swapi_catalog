@@ -8,6 +8,8 @@ export default function Vehicles() {
 
 const [vehicle, setVehicles] = useState([]);
 const [query, setQuery] = useState ("");
+const [isLoading, setIsLoading] = useState(false);
+const [err, setErr] = useState("");
 
 const urls = [
     "https://swapi.dev/api/vehicles/?page=1",
@@ -18,6 +20,7 @@ const urls = [
 ]
 
     const getData = async()=>{
+        setIsLoading(true);
         try {
             const res = await Promise.all(
                 urls.map(url => fetch(url).then(res => res.json()))
@@ -34,13 +37,20 @@ const urls = [
             data = vehiclesArray; 
             setVehicles(data);
         } catch (error) {
-            console.log(`Error`, error)
+            console.log(`Error`, error);
+            setErr(`Something went wrong: ${err.message}`);
+        } finally {
+            setIsLoading(false);
         }
     };
     return (
         <div>
             <input className='search-input' placeholder='Search for vehicle...' 
             onChange = {event => setQuery(event.target.value)}></input>
+            <div className='loading-error'>
+                {err && <h2>{err}</h2>}
+                {isLoading && <h2>Loading...</h2>}
+            </div>
             <div className="result">
             {vehicle.filter(vehicle => {
                 if (query === "") {

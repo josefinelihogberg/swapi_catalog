@@ -9,6 +9,8 @@ function Starships() {
 
     const [starship, setStarships] = useState([]);
     const [query, setQuery] = useState ("");
+    const [isLoading, setIsLoading] = useState(false);
+    const [err, setErr] = useState("");
 
     const urls = [
         "https://swapi.dev/api/starships/?page=1",
@@ -18,6 +20,7 @@ function Starships() {
     ]
 
     const getData = async()=>{
+        setIsLoading(true);
         try {
             const res = await Promise.all(
                 urls.map(url => fetch(url).then(res => res.json()))
@@ -33,7 +36,10 @@ function Starships() {
             data = starshipsArray; 
             setStarships(data);
         } catch (error) {
-            console.log(`Error`, error)
+            console.log(`Error`, error);
+            setErr(`Something went wrong: ${err.message}`);
+        } finally {
+            setIsLoading(false);
         }
     };
 
@@ -42,8 +48,12 @@ function Starships() {
         <div>
              <input className='search-input' placeholder='Search for starship...' 
             onChange = {event => setQuery(event.target.value)}></input>
+            <div className='loading-error'>
+                {err && <h2>{err}</h2>}
+                {isLoading && <h2>Loading...</h2>}
+            </div>
             <div className="result">
-            {starship.filter(starship => {
+                {starship.filter(starship => {
                 if (query === "") {
                     return starship;
                 } else if (starship.name.toLowerCase().includes(query.toLowerCase())){
@@ -52,7 +62,7 @@ function Starships() {
                 } else {
                     return false;
                 }
-            }).map((starship) => (
+                }).map((starship) => (
             <div key = {starship.name}>
             <div className='info-title'>{starship.name}</div>
             <div className='info'>

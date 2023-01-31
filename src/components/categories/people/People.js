@@ -10,6 +10,8 @@ export default function People() {
 
 const [people, setPeople] = useState([]);
 const [query, setQuery] = useState ("");
+const [isLoading, setIsLoading] = useState(false);
+const [err, setErr] = useState("");
 
 const urls = [
     "https://swapi.dev/api/people/?page=1",
@@ -24,6 +26,7 @@ const urls = [
 ]
 
     const getData = async()=>{
+        setIsLoading(true)
         try {
             const res = await Promise.all(
                 urls.map(url => fetch(url).then(res => res.json()))
@@ -40,15 +43,22 @@ const urls = [
             data = peopleArray; 
             setPeople(data);
         } catch (error) {
-            console.log(`Error`, error)
+            console.log(`Error`, error);
+            setErr(`Something went wrong: ${err.message}`);
+        } finally {
+            setIsLoading(false);
         }
     };
     return (
         <div>
             <input className='search-input' placeholder='Search for character...' 
             onChange = {event => setQuery(event.target.value)}></input>
+            <div className='loading-error'>
+                {err && <h2>{err}</h2>}
+                {isLoading && <h2>Loading...</h2>}
+            </div>
             <div className="result">
-            {people.filter(person => {
+                {people.filter(person => {
                 if (query === "") {
                     return person;
                 } else if (person.name.toLowerCase().includes(query.toLowerCase())){
@@ -57,7 +67,7 @@ const urls = [
                 } else {
                     return false;
                 };
-            }).map((person) => (
+                }).map((person) => (
             <div key = {person.name}>
             <p className='info-title people'>{person.name}</p>
             <div className='info'>
