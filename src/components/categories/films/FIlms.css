@@ -149,13 +149,14 @@ p .category {
 .loading-error{
     position: absolute; 
     top: 40%;
-    left: 32.5%;
+    left: 34.6%;
     font-family: catalog;
     font-size: 1em; 
     color: #fdd707;
 }
 
 .jokes {
+    width: 600px; 
     font-size: 1.5em;
     text-align: center;
 }
