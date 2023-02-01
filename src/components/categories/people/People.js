@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react';
-import Data from '../../Data'
+import Data from '../../Data';
+import loading from '../../UI/assets/loading.png';
 
 
 export default function People() {
@@ -55,7 +56,9 @@ const urls = [
             onChange = {event => setQuery(event.target.value)}></input>
             <div className='loading-error'>
                 {err && <h2>{err}</h2>}
-                {isLoading && <h2>Loading...</h2>}
+                {isLoading && <div className='jokes'><img src={loading} alt="loading icon" />
+        <p>What did the dentist say to Luke Skywalker?</p>
+        <p>May the floss be with you.</p></div>}
             </div>
             <div className="result">
                 {people.filter(person => {

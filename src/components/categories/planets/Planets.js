@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import loading from '../../UI/assets/loading.png';
 
 
 
@@ -54,7 +55,9 @@ function Planets() {
             onChange = {event => setQuery(event.target.value)}></input>
             <div className='loading-error'>
             {err && <h2>{err}</h2>}
-            {isLoading && <h2>Loading...</h2>}
+            {isLoading && <div className='jokes'><img src={loading} alt="loading icon" />
+        <p>Why couldn’t Luke find love?</p>
+        <p>He was looking in Alderaan places.</p></div>}
             </div>
             <div className="result">
             {planet.filter(planet => {

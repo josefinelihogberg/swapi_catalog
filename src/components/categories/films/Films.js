@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
 import "./Films.css";
-
+import loading from "../../UI/assets/loading.png"
 
 export default function Films( ) {
 useEffect(() => {
@@ -38,7 +38,7 @@ return (
             <div className='loading-error'>
 
         {err && <h2>{err}</h2>}
-        {isLoading && <div className='jokes'><h2>Loading...</h2>
+        {isLoading && <div className='jokes'><img src={loading} alt="loading icon" />
         <p>Where did Luke get his cybernetic hand?</p>
         <p>The second hand store.</p></div>}
         </div>

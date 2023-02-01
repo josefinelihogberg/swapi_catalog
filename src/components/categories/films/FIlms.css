@@ -16,7 +16,7 @@
 
 .result {
     width: 60%; 
-    height: 650px; 
+    height: 630px; 
     overflow-y: scroll;
     position: absolute;
     top: 30%;
@@ -149,7 +149,7 @@ p .category {
 .loading-error{
     position: absolute; 
     top: 40%;
-    left: 34%;
+    left: 32.5%;
     font-family: catalog;
     font-size: 1em; 
     color: #fdd707;
@@ -161,7 +161,6 @@ p .category {
 }
 .jokes h2 {
     display: inline-block;
-    box-shadow: 0 0 10px 5px #6a4c93;
     padding: 1em;
     border-radius: 15px;
     margin-bottom: .5em; 
@@ -175,12 +174,9 @@ p .category {
         margin: 0.1em; 
         font-size: 1em;
     }
-    .search-input {
-        left: 35%; 
-        top: 22%;
-    }
+    
     .result {
-        height: 550px; 
+        height: 520px; 
         width: 60%;
         left: 20.6%; 
     }
@@ -204,7 +200,7 @@ p .category {
     }
     .search-input {
         top: 23%;
-        left: 43%;
+        left: 40%;
     }
     .flex {
         top: 25%; 
@@ -224,6 +220,6 @@ p .category {
         left: 20%; 
     }
     .flex {
-        top: 22%; 
+        top: 20%; 
     }
 }

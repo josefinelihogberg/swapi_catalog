@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-// import Data from '../../Data'
+import loading from '../../UI/assets/loading.png';
 
 
 export default function Species() {
@@ -53,7 +53,9 @@ export default function Species() {
             onChange = {event => setQuery(event.target.value)}></input>
       <div className='loading-error'>
             {err && <h2>{err}</h2>}
-            {isLoading && <h2>Loading...</h2>}
+            {isLoading && <div className='jokes'><img src={loading} alt="loading icon" />
+        <p>Stormtroopers in quarantine are like, “I miss people.”</p>
+        <p>I’m not too sympathetic. They always miss people.</p></div>}
         </div>
       <div className='result'>
         {species.filter(species => {

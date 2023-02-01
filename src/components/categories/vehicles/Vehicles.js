@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import loading from '../../UI/assets/loading.png';
 
 export default function Vehicles() {
     useEffect(() => {
@@ -49,7 +50,9 @@ const urls = [
             onChange = {event => setQuery(event.target.value)}></input>
             <div className='loading-error'>
                 {err && <h2>{err}</h2>}
-                {isLoading && <h2>Loading...</h2>}
+                {isLoading && <div className='jokes'><img src={loading} alt="loading icon" />
+        <p>What’s Yoda’s advice for going to the bathroom?</p>
+        <p>Doo-doo or doo-doo-not-do.</p></div>}
             </div>
             <div className="result">
             {vehicle.filter(vehicle => {

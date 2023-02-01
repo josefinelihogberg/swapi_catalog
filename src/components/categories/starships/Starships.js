@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import loading from '../../UI/assets/loading.png';
 
 
 function Starships() {
@@ -50,7 +51,9 @@ function Starships() {
             onChange = {event => setQuery(event.target.value)}></input>
             <div className='loading-error'>
                 {err && <h2>{err}</h2>}
-                {isLoading && <h2>Loading...</h2>}
+                {isLoading && <div className='jokes'><img src={loading} alt="loading icon" />
+        <p>Is BB hungry?</p>
+        <p>No, BB-8.</p></div>}
             </div>
             <div className="result">
                 {starship.filter(starship => {
