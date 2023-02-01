@@ -38,6 +38,7 @@ function Planets() {
                     planetsArray.push(array[j]);
                 }
             }
+            console.log(data);
             data = planetsArray; 
             setPlanets(data);
         } catch (error) {
@@ -73,8 +74,10 @@ function Planets() {
             <div className='info'>
             <p><span className='category'>Diameter:</span> {planet.diameter}</p>
             <p><span className='category'>Orbital period:</span>  {planet.orbital_period} days</p>
+            <p><span className='category'>Rotation period:</span>  {planet.rotation_period} hours</p>
             <p><span className='category'>Climate:</span>  {planet.climate}</p>
             <p><span className='category'>Terrain: </span> {planet.terrain}</p>
+            <p><span className='category'>Population:</span>  {planet.population} beings</p>
             </div>
            
             </div>

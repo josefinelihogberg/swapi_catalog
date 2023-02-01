@@ -16,11 +16,11 @@
 
 .result {
     width: 60%; 
-    height: 550px; 
+    height: 650px; 
     overflow-y: scroll;
     position: absolute;
     top: 30%;
-    left: 20%; 
+    left: 19.8%; 
     z-index: 1000;
     }
 
@@ -40,7 +40,6 @@
 
 .result div {
     padding: 1em; 
-    flex: 0 1 50%; 
     margin-top: -.5em;
 }
 
@@ -150,13 +149,13 @@ p .category {
 .loading-error{
     position: absolute; 
     top: 40%;
-    left: 45%;
+    left: 47%;
     font-family: catalog;
     font-size: 1em; 
     color: #fdd707;
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1500px) {
+@media screen and (min-width: 1400px) and (max-width: 1850px) {
     button {
         margin: 0.1em; 
         font-size: 1em;
@@ -166,9 +165,9 @@ p .category {
         top: 22%;
     }
     .result {
-        height: 450px; 
+        height: 650px; 
         width: 50%;
-        left: 27%; 
+        left: 25%; 
     }
     .info p {
         font-size: .9em;
@@ -185,7 +184,25 @@ p .category {
         font-family: catalog;
         position: absolute; 
         top: 40%;
-        left: 45%; 
+        left: 43%; 
         z-index: 1000; 
     }
+    .search-input {
+        top: 23%;
+        left: 41%;
+    }
 }
+
+/* @media screen and (min-width: 1000px) and (max-width: 1399px) {
+    .img-div {
+        margin-top: 7em; 
+    }
+
+    .result {
+        height: 650px; 
+        left: 20.5%;
+    }
+    .loading-error {
+        left: 46%; 
+    }
+} */

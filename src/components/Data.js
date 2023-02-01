@@ -11,13 +11,15 @@ export default function Data(props) {
     const [species, setSpecies] = useState("");
 
     const getHomeData = async() => {
+        console.log(props.urlHome)
         const res = await fetch(props.urlHome);
         const data = await res.json();
-        // (console.log(data))
+        (console.log(data))
         setHome(data.name)
         
     }
     const getSpeciesData = async() => {
+      console.log(props.urlSpecies)
       const res = await fetch(props.urlSpecies);
         const data = await res.json();
         setSpecies(data.name)
