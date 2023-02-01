@@ -38,7 +38,9 @@ return (
             <div className='loading-error'>
 
         {err && <h2>{err}</h2>}
-        {isLoading && <h2>Loading...</h2>}
+        {isLoading && <div className='jokes'><h2>Loading...</h2>
+        <p>Where did Luke get his cybernetic hand?</p>
+        <p>The second hand store.</p></div>}
         </div>
         <div className='result'>
             {films.filter( film => {
