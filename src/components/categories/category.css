@@ -4,14 +4,14 @@
     padding: .8em; 
     border-radius: 50%;
     background-color:#e5e5e5 ;
-    margin-bottom: .2em;
+    margin-bottom: .4em;
 }
 
 .img-div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4em 6em; 
+    margin: 4em 8em; 
     
 }
 
@@ -86,7 +86,7 @@ button:hover{
     color: #575756;
     font-weight: 700;
     font-size: .8em;
-    line-height: 1.2em;
+    line-height: 1em;
 }
 
 .search-input::placeholder{
