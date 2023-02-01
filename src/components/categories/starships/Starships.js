@@ -67,9 +67,12 @@ function Starships() {
             <div className='info-title'>{starship.name}</div>
             <div className='info'>
             <p><span className='category'>Model:</span> {starship.model}</p>
+            <p><span className='category'>Length:</span>  {starship.length} m</p>
             <p><span className='category'>Cargo Capacity:</span>  {starship.cargo_capacity}</p>
+            <p><span className='category'>Consumables:</span>  {starship.consumables}</p>
             <p><span className='category'>Crew:</span>  {starship.crew} crewmember(s)</p>
             <p><span className='category'>Passengers:</span>  {starship.passengers} passanger(s)</p>
+            <p><span className='category'>Cost:</span>  {starship.cost_in_credits} credits</p>
             <p><span className='category'>Manufacturer:</span>  {starship.manufacturer}</p>
             </div>
             </div>

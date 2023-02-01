@@ -38,7 +38,6 @@ function Planets() {
                     planetsArray.push(array[j]);
                 }
             }
-            console.log(data);
             data = planetsArray; 
             setPlanets(data);
         } catch (error) {
