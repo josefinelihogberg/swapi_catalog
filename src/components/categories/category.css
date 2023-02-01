@@ -86,7 +86,7 @@ button:hover{
     color: #575756;
     font-weight: 700;
     font-size: .8em;
-    line-height: 1em;
+    line-height: .8em;
 }
 
 .search-input::placeholder{
