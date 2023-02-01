@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/swapi_catalog/static/css/main.672cbbaf.css",
+    "main.js": "/swapi_catalog/static/js/main.06b4101e.js",
+    "static/media/millenium_falcon_starship.png": "/swapi_catalog/static/media/millenium_falcon_starship.85931a29f80d3eedbb84.png",
+    "static/media/planet_background.jpg": "/swapi_catalog/static/media/planet_background.57198e0bab3e2b9355bd.jpg",
+    "static/media/ATAT.png": "/swapi_catalog/static/media/ATAT.95e76019e04891dc32d8.png",
+    "static/media/species_yoda.png": "/swapi_catalog/static/media/species_yoda.2686d5dc6b29b3938b67.png",
+    "static/media/SFDistantGalaxy.ttf": "/swapi_catalog/static/media/SFDistantGalaxy.ee1b4a3597465caa4073.ttf",
+    "static/media/people_leia.png": "/swapi_catalog/static/media/people_leia.495bfc2dd3f241902176.png",
+    "static/media/Starjedi.ttf": "/swapi_catalog/static/media/Starjedi.8d577dc1e1755c4860f3.ttf",
+    "static/media/deathstar_planet.png": "/swapi_catalog/static/media/deathstar_planet.d37dc84bd215def88698.png",
+    "index.html": "/swapi_catalog/index.html",
+    "main.672cbbaf.css.map": "/swapi_catalog/static/css/main.672cbbaf.css.map",
+    "main.06b4101e.js.map": "/swapi_catalog/static/js/main.06b4101e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.672cbbaf.css",
+    "static/js/main.06b4101e.js"
+  ]
+}
