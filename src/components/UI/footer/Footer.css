@@ -8,3 +8,9 @@
     margin: auto 0;
     color: rgb(132, 91, 149);
 }
+
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
+    .footer {
+        left: 34%;
+    }
+}

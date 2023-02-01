@@ -193,16 +193,16 @@ p .category {
     }
 }
 
-/* @media screen and (min-width: 1000px) and (max-width: 1399px) {
+@media screen and (min-width: 1000px) and (max-width: 1399px) {
     .img-div {
-        margin-top: 7em; 
+        margin-top: 0.3em; 
     }
 
     .result {
-        height: 650px; 
+        height: 420px; 
         left: 20.5%;
     }
     .loading-error {
         left: 46%; 
     }
-} */
+}
