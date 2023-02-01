@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react';
-import "./Films.css";
-import loading from "../../UI/assets/loading.png"
+import "./category.css";
+import loading from "../UI/assets/loading.png"
 
 export default function Films( ) {
 useEffect(() => {

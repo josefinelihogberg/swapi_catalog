@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import loading from '../../UI/assets/loading.png';
+import loading from '../UI/assets/loading.png';
 
 export default function Vehicles() {
     useEffect(() => {

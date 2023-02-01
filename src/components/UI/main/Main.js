@@ -7,12 +7,12 @@ import leia from '../assets/people_leia.png';
 import yoda from '../assets/species_yoda.png';
 import death from '../assets/deathstar_planet.png';
 import falcon from "../assets/millenium_falcon_starship.png";
-import Films from '../../categories/films/Films';
-import People from '../../categories/people/People';
-import Planets from '../../categories/planets/Planets';
-import Species from '../../categories/species/Species';
-import Starships from '../../categories/starships/Starships';
-import Vehicles from '../../categories/vehicles/Vehicles'
+import Films from '../../categories/Films';
+import People from '../../categories/People';
+import Planets from '../../categories/Planets';
+import Species from '../../categories/Species';
+import Starships from '../../categories/Starships';
+import Vehicles from '../../categories/Vehicles'
 
 function Main() {
     const [active, setActive] = useState("");

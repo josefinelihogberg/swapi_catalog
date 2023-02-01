@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from 'react';
-import Data from '../../Data';
-import loading from '../../UI/assets/loading.png';
+import Data from './Data';
+import loading from '../UI/assets/loading.png';
 
 
 export default function People() {
