@@ -4,5 +4,5 @@
 ##### Josefine Li Högberg,
 ##### Erica Eklund
 ##### Prototype is designed for desktop and laptop with React. 
-##### Welcome to experience the game online:
+##### Welcome to experience online:
 #### https://josefinelihogberg.github.io/swapi_catalog
