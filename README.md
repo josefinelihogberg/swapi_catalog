@@ -1,5 +1,5 @@
 # StarWars Catalog
-FE22 KYH Group Project 2023, JavaScript2
+#### FE22 KYH Group Project 2023, JavaScript2
 --Group The Good Times
 Josefine Li Högberg,
 Erica Eklund
