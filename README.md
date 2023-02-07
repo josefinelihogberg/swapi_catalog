@@ -1,7 +1,7 @@
 ## StarWars Catalog - Examinationsuppgift JavaScript2
-keywords: React, AJAX
+**keywords: React, AJAX**
 
-*All the data are from the open API SWAPI dev (https://swapi.dev/)*
+All the data are from the open API SWAPI dev (https://swapi.dev/)
 
 FE22 KYH Group Happy Good Times
 
