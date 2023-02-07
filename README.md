@@ -1,5 +1,5 @@
 # StarWars Catalog (React)
-##### All the data are from The Star Wars API: https://swapi.dev/
+##### All the data are from the open API SWAPI dev (https://swapi.dev/)
 #### FE22 KYH Group Project 2023, JavaScript2
 ##### Group: Happy Good Times
 ##### Josefine Li Högberg,
