@@ -15,5 +15,6 @@ Welcome to experience online:
 
 https://josefinelihogberg.github.io/swapi_catalog
 
-![starwars](https://user-images.githubusercontent.com/97985695/217207428-b7f52668-5fd8-428f-840b-985346f3e2eb.jpg)
+<img width="658" alt="1675766706752" src="https://user-images.githubusercontent.com/97985695/217223752-340fa63a-da50-4850-b4a5-bbf026b3c40b.png">
+
 
