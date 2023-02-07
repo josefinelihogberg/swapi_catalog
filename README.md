@@ -1,4 +1,4 @@
-# StarWars Catalog - Examinationsuppgift JavaScript2
+## StarWars Catalog - Examinationsuppgift JavaScript2
 keywords: React, AJAX
 
 *All the data are from the open API SWAPI dev (https://swapi.dev/)*
